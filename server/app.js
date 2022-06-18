@@ -5,6 +5,7 @@ import entriesRoutes from './routes/routes.js'
 
 const app = express()
 
+app.set('port', process.env.PORT || 8000);
 app.use(cors())
 app.use(express.json())
 app.use('/entries', entriesRoutes)
@@ -20,6 +21,6 @@ app.get('/', (req, res) => {
   res.send('Testing...')
 })
 
-app.listen(8000, () => {
-  console.log('Server running on port 8000')
+app.listen(app.get('port'), () => {
+  console.log('Server running on port ', app.get('port'))
 })
