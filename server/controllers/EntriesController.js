@@ -16,7 +16,7 @@ export const getEntry = async (req, res) => {
     const entry = await EntriesModel.findAll({
       where:{ id: req.params.id }
     })
-    res.json(entry)
+    res.json(entry[0])
   } catch (error) {
     res.json( {message: error.message} )
   }
@@ -26,7 +26,7 @@ export const getEntry = async (req, res) => {
 export const addEntry = async (req, res) => {
   try {
     await EntriesModel.create(req.body)
-    res.json( {message: 'New entry successfully created '} )
+    res.json( {message: 'New entry successfully created'} )
     
   } catch (error) {
     res.json( {message: error.message} )
@@ -39,7 +39,7 @@ export const updateEntry = async (req, res) => {
     await EntriesModel.update(req.body, {
       where:{ id: req.params.id }
     })
-    res.json( {message: 'Entry successfully updated '} )
+    res.json( {message: 'Entry successfully updated'} )
   } catch (error) {
     res.json( {message: error.message} )
   }
@@ -51,6 +51,7 @@ export const deleteEntry = async (req, res) => {
     await EntriesModel.destroy({
       where:{ id: req.params.id }
     })
+    res.json( {message: 'Entry successfully deleted'} )
   } catch (error) {
     res.json( {message: error.message} )
   }

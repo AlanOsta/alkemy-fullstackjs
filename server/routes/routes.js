@@ -1,5 +1,5 @@
-import express from "express"
-import { addEntry, deleteEntry, getAllEntries, getEntry, updateEntry } from "../controllers/EntriesController.js"
+import express from 'express'
+import { addEntry, deleteEntry, getAllEntries, getEntry, updateEntry } from '../controllers/EntriesController.js'
 
 const router = express.Router()
 
