@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/esm/Form'
 import Button from 'react-bootstrap/esm/Button'
@@ -76,7 +76,8 @@ const EditEntry = () => {
           </Form.Select>
         </Form.Group>      
                 
-        <Button variant="primary" type="submit">Edit entry</Button>
+        <Button variant="primary" type="submit" className='mx-1'>Submit</Button>
+        <Link to='/' className='btn btn-secondary mx-1'>Back</Link>
     </Form>
     </Container>
   )

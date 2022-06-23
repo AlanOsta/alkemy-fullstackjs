@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/esm/Form'
 import Button from 'react-bootstrap/esm/Button'
@@ -12,7 +12,7 @@ const AddEntry = () => {
   const [concept, setConcept] = useState('')
   const [amount, setAmount] = useState('')
   const [date, setDate] = useState('')
-  const [type, setType] = useState('')
+  const [type, setType] = useState('income')
   const navigate = useNavigate()
   
   const addEntry = async (e) => {
@@ -36,7 +36,7 @@ const AddEntry = () => {
             value={concept}
             onChange={ (e) => setConcept(e.target.value)}
             type="text" 
-            placeholder="Entry's description" />          
+            placeholder="Entry's description" />            
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formAmount">
@@ -65,7 +65,8 @@ const AddEntry = () => {
           </Form.Select>
         </Form.Group>      
                 
-        <Button variant="primary" type="submit">Add new entry</Button>
+        <Button variant="primary" type="submit" className='mx-1'>Submit</Button>
+        <Link to='/' className='btn btn-secondary mx-1'>Back</Link>
     </Form>
     </Container>
   )

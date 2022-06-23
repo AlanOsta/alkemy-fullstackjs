@@ -17,10 +17,6 @@ try {
   console.log(`Connection error: ${error}`)
 }
 
-app.get('/', (req, res) => {
-  res.send('Testing...')
-})
-
 app.listen(app.get('port'), () => {
   console.log('Server running on port ', app.get('port'))
 })

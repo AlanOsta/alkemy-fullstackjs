@@ -1,3 +1,7 @@
-.App {
-  text-align: center;
+.income {
+  background-color: #aff8db;
+}
+
+.expense {
+  background-color: #ffcbc1;
 }

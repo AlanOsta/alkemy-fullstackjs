@@ -1,0 +1,35 @@
+
+Author: Alan Ostaszynski
+
+#############################################################################################
+
+Alkemy's Full Stack JS Technical Challenge
+
+Objetivo
+
+Desarrollar una aplicación para administración de presupuesto personal. La misma debe
+permitir crear y editar ingresos y egresos de dinero, y mostrar un balance resultante de las
+operaciones registradas.
+
+#############################################################################################
+
+Server - Node.JS + Express, MySQL2, Sequelize, cors
+
+Dev port: 8000
+End points:
+          GET '/entries/' list all entries from database
+          GET '/entries/:id' list specific entry by ID
+          POST '/entries/' adds new entry
+          PUT '/entries/:id' updates specific entry by ID
+          DELETE '/entries/:id' deletes specific entry by ID
+
+#############################################################################################
+
+Client - React.JS (with hooks) + AXIOS, React-Bootstrap
+
+routes:
+        '/' main view
+        '/add' add new entry form
+        '/edit/:id' edit specific entry by ID
+
+
